@@ -34,13 +34,25 @@ const counter = () => {
   counterValue += 1;
   return counterValue;
 };
-console.log(counter()); // 1
-console.log(counter()); // 2
-console.log(counter()); // 3
+console.log(`Counter Value is: ${counter()}`); // 1
+console.log(`Counter Value is: ${counter()}`); //
+console.log(`Counter Value is: ${counter()}`); //
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
-const counterFactory = () => {
+let counterValueFactory = 0;
+const counterFactory = (action) => {
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
+  if (action == "increment") {
+    counterValueFactory += 1;
+  }
+  else if (action == "decrement") {
+    counterValueFactory += -1;
+  }
+  return counterValueFactory;
 };
+console.log(`Increase Factory Counter Value is: ${counterFactory("increment")}`); // 1
+console.log(`Increase Factory Counter Value is: ${counterFactory("increment")}`); // 2
+console.log(`Decrement Factory Counter Value is: ${counterFactory("decrement")}`); // 1
+console.log(`Decrement Factory Counter Value is: ${counterFactory("decrement")}`); // 0
