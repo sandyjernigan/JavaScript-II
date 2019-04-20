@@ -2,7 +2,6 @@
 // Write a simple closure of your own creation.  Keep it simple!
 // One aspect of a closure, closures are a tool for passing data to the next interaction (or function).
 
-/* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 function animals() {
   const animalsIntro = "There are many species in the animal kingdom."
   const kingdom = "animal"
@@ -24,15 +23,20 @@ function animals() {
   mammals(); 
 } // animals
 
-animals();
+//animals();
+
+/* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 // ==== Challenge 2: Create a counter function ====
+let counterValue = 0;
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  counterValue += 1;
+  return counterValue;
 };
-// Example usage: const newCounter = counter();
-// newCounter(); // 1
-// newCounter(); // 2
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
