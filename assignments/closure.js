@@ -23,7 +23,7 @@ function animals() {
   mammals(); 
 } // animals
 
-//animals();
+animals();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
@@ -56,3 +56,17 @@ console.log(`Increase Factory Counter Value is: ${counterFactory("increment")}`)
 console.log(`Increase Factory Counter Value is: ${counterFactory("increment")}`); // 2
 console.log(`Decrement Factory Counter Value is: ${counterFactory("decrement")}`); // 1
 console.log(`Decrement Factory Counter Value is: ${counterFactory("decrement")}`); // 0
+
+// Another take on Challenge 2: Create a counter function ====
+const counter2 = {
+  points: 0,
+  score: function()  {
+      this.points++;
+  }
+}
+
+console.log(`Counter Value is: ${counter2.points}`); // 0
+counter2.score();
+console.log(`Counter Value is: ${counter2.points}`); // 1
+counter2.score();
+console.log(`Counter Value is: ${counter2.points}`); // 2
