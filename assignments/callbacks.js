@@ -32,26 +32,46 @@ function getLength(arr, cb) {
   return cb(arr.length);
 }
 
+getLength(items, function(cb) {
+  console.log(cb)
+});
+
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length - 1]);
 }
+
+last(items, function(cb) {
+  console.log(cb)
+});
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   return cb(x + y);
 }
 
+sumNums(2, 3, function(cb) {
+  console.log(cb)
+});
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   return cb(x * y);
 }
+
+multiplyNums(2, 3, function(cb) {
+  console.log(cb)
+});
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
   return cb(list.includes(item));
 }
+
+contains('Pencil', items, function(cb) {
+  console.log(cb)
+});
 
 /* STRETCH PROBLEM */
 
@@ -63,3 +83,6 @@ function removeDuplicates(array, cb) {
   return cb(uniqueValues);
 }
 
+removeDuplicates(items, function(cb) {
+  console.log(cb)
+});
